@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+# Instrukcja uruchomienia projektu React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Wymagania wstępne
 
-Currently, two official plugins are available:
+Zanim zaczniesz, upewnij się, że masz zainstalowane następujące narzędzia:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Node.js
 
-## Expanding the ESLint configuration
+Projekt wymaga, aby na Twoim komputerze była zainstalowana wersja 18>= Node.js. Możesz sprawdzić swoją aktualną wersję Node.js, używając poniższego polecenia w terminalu:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```
+node -v
+```
+Jeśli potrzebujesz zainstalować lub zaktualizować Node.js, odwiedź oficjalną [stronę](https://nodejs.org/en) i pobierz odpowiedni instalator dla swojego systemu operacyjnego.
 
-- Configure the top-level `parserOptions` property like this:
+### Yarn
+Do zarządzania zależnościami projektu używany jest ```Yarn```. Jeśli nie masz go zainstalowanego, możesz to zrobić wykonując poniższe polecenie:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+npm install --global yarn
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Uruchomienie projektu
+Po zainstalowaniu wymaganych narzędzi, przejdź do katalogu głównego projektu i wykonaj następujące kroki:
+
+Instalacja zależnościAby zainstalować wszystkie zależności projektu, wykonaj:
+```
+yarn install
+```
+## Uruchomienie serwera deweloperskiego
+Aby uruchomić serwer deweloperski, który umożliwi Ci pracę i testowanie projektu w czasie rzeczywistym, użyj polecenia:
+```
+yarn dev
+```
+
+Serwer deweloperski będzie dostępny pod adresem http://localhost:5173.
+
+## Uruchomienie wersji produkcyjnej
+Jeśli chcesz uruchomić projekt w wersji produkcyjnej, najpierw zbuduj aplikację, a następnie uruchom ją:
+```
+yarn build
+yarn start
+```
+
+Wersja produkcyjna aplikacji będzie również dostępna pod adresem http://localhost:5173, chyba że skonfigurowano inny port.
