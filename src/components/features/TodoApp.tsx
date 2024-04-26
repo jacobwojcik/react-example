@@ -38,7 +38,7 @@ function TodoApp() {
 
   return (
     <>
-      <div className="max-w-[680px] mx-auto my-16">
+      <div className="max-w-[680px] mx-6 my-16">
         <AppHeader />
         <TodoInput setTodos={setTodos} />
         <TodoSummary todos={todos} />
