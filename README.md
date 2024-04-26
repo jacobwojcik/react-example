@@ -42,4 +42,4 @@ yarn build
 yarn start
 ```
 
-Wersja produkcyjna aplikacji będzie również dostępna pod adresem http://localhost:5173, chyba że skonfigurowano inny port.
+Wersja produkcyjna aplikacji będzie również dostępna pod adresem http://localhost:4173, chyba że skonfigurowano inny port.
